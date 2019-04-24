@@ -22,7 +22,7 @@ def preprocess_ljspeech(args):
   write_metadata(metadata, out_dir)
 
 def preprocess_blizzard2013(args):
-  in_dir = os.path.join(args.base_dir, 'database/blizzard2013/segmented')
+  in_dir = os.path.join(args.base_dir, 'train/segmented')
   out_dir = os.path.join(args.base_dir, args.output)
   os.makedirs(out_dir, exist_ok=True)
   metadata = blizzard2013.build_from_path(in_dir, out_dir, args.num_workers, tqdm=tqdm)
